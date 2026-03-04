@@ -1,24 +1,24 @@
 :root {
   /* ========== PRIMARY (VERDE TECH) ========== */
-  --color-primary: #22C55E;
-  --color-primary-hover: #16A34A;
-  --color-primary-light: #4ADE80;
+  --color-primary: #22c55e;
+  --color-primary-hover: #16a34a;
+  --color-primary-light: #4ade80;
 
   /* ========== BACKGROUND ========== */
-  --color-bg: #0F172A;
-  --color-bg-secondary: #161B22;
-  --color-elevated: #1F2630;
-  --color-border: #2B3440;
+  --color-bg: #0f172a;
+  --color-bg-secondary: #161b22;
+  --color-elevated: #1f2630;
+  --color-border: #2b3440;
 
   /* ========== TEXT ========== */
-  --color-text-primary: #F97316;
-  --color-text-secondary: #EA580C;
+  --color-text-primary: #f97316;
+  --color-text-secondary: #ea580c;
   --color-text-muted: #c5bfb8;
   --color-span: #09c74e;
 
   /* ========== STATUS ========== */
-  --color-success: #22C55E;
-  --color-warning: #F59E0B;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
   --color-danger: #352d2d;
 
   /* ========== BUTTON EXAMPLE ========== */

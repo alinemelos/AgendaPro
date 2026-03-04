@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   height: fit-content;
   gap: 40px;
-  background-color: #161B22;
+  background-color: #161b22;
   background-color: var(--color-bg-secondary);
   padding: 40px 60px;
 }
@@ -101,11 +101,10 @@
   .aboutsection-card p {
     font-size: 1.5rem;
     padding: 20px 0 20px 0;
-
   }
 
   .aboutsection-card span {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .aboutsection-left {
@@ -114,15 +113,19 @@
 }
 
 /* Mobile grande */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* Tablet */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* Laptop */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* Desktop */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
 
 /* Desktop grande */

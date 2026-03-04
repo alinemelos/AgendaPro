@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #161B22;
+  background-color: #161b22;
   background-color: var(--color-bg-secondary);
   padding: 40px 60px;
 }
@@ -55,7 +55,7 @@
   border-radius: 50%;
   background-color: white;
   padding: 5px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .team-section-card__content a img:hover {
@@ -74,15 +74,19 @@
 }
 
 /* Mobile grande */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* Tablet */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* Laptop */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* Desktop */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
 
 /* Desktop grande */

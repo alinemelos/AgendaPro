@@ -23,7 +23,6 @@ function LoginSection() {
       : "http://localhost:8000/auth/register";
 
     try {
-
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -48,12 +47,10 @@ function LoginSection() {
         console.log("Cadastro realizado com sucesso!");
         setIsLogin(true);
       }
-
     } catch (error) {
       console.error(error.message);
       return;
     }
-
   }
 
   return (

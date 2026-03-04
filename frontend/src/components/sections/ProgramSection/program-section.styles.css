@@ -4,7 +4,7 @@
   align-items: center;
   padding: 40px 60px;
   height: fit-content;
-  background-color: #0F172A;
+  background-color: #0f172a;
   background-color: var(--color-bg);
 }
 
@@ -92,12 +92,15 @@
 }
 
 /* Tablet */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* Laptop */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* Desktop */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
 
 /* Desktop grande */

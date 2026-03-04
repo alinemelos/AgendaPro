@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #161B22;
+  background-color: #161b22;
   background-color: var(--color-bg-secondary);
   color: white;
   padding: 0 20px;
@@ -31,7 +31,6 @@
 }
 
 @media (min-width: 280px) and (max-width: 767px) {
-
   .header {
     width: 100%;
     justify-content: space-between;
@@ -54,21 +53,24 @@
 
   .btn-primary button {
     padding: 12px 15px;
-    font-size: .9rem
+    font-size: 0.9rem;
   }
-
 }
 
 /* Mobile grande */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* Tablet */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* Laptop */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* Desktop */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
 
 /* Desktop grande */

@@ -1,6 +1,6 @@
 .container-pricingsection {
   height: fit-content;
-  background-color: #0F172A;
+  background-color: #0f172a;
   background-color: var(--color-bg);
   padding: 40px 60px;
 }
@@ -69,7 +69,6 @@
   font-size: 36px;
   line-height: 20px;
   color: var(--color-span);
-
 }
 
 /* Mobile first */
@@ -91,20 +90,22 @@
     display: flex;
     width: 100%;
   }
-
-
 }
 
 /* Mobile grande */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 /* Tablet */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}
 
 /* Laptop */
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 /* Desktop */
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+}
 
 /* Desktop grande */
