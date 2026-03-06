@@ -1,6 +1,12 @@
+import os
+import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from login.views import router as login_router
+
+if not os.path.exists("users.json"):
+    with open("users.json", "w", encoding="utf-8") as file:
+        json.dump([], file)
 
 app = FastAPI()
 
