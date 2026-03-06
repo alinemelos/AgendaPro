@@ -1,0 +1,42 @@
+const API_URL = "http://localhost:8000";
+export async function register(email, senha) {
+	const response = await fetch(`${API_URL}/auth/register`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ email, senha }),
+	});
+
+	const data = await response.json();
+
+	if (!response.ok) {
+		throw new Error(data.detail || "Erro no cadastro");
+	}
+
+	return data;
+}
+
+export async function login(email, senha) {
+	const response = await fetch(`${API_URL}/auth/login`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ email, senha }),
+	});
+
+	let data;
+
+	try {
+		data = await response.json();
+	} catch {
+		data = {};
+	}
+
+	if (!response.ok) {
+		throw new Error(data.detail || "Erro no login");
+	}
+
+	return data;
+}

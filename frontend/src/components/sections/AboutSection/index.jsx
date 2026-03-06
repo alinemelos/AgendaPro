@@ -10,7 +10,7 @@ import "./about-section.styles.css";
 
 function AboutSection() {
   return (
-    <div className="container-aboutsection">
+    <div id="aboutSection" className="container-aboutsection">
       <div className="aboutsection-left">
         <img src={aboutImg} alt="" />
         <span>
