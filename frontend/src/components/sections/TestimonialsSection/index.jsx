@@ -7,7 +7,7 @@ import "./testimonials-section.styles.css";
 
 function TestimonialsSection() {
 	return (
-		<div className="container-testimonials">
+		<div id="TestimonialsSection" className="container-testimonials">
 			<div className="testimonials-left">
 				<img src={homeImg} alt="" />
 			</div>

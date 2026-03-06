@@ -1,7 +1,6 @@
-const API_URL = "http://localhost:8000/auth";
-
+const API_URL = "http://localhost:8000";
 export async function register(email, senha) {
-	const response = await fetch(`${API_URL}/register`, {
+	const response = await fetch(`${API_URL}/auth/register`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -9,11 +8,17 @@ export async function register(email, senha) {
 		body: JSON.stringify({ email, senha }),
 	});
 
-	return response.json();
+	const data = await response.json();
+
+	if (!response.ok) {
+		throw new Error(data.detail || "Erro no cadastro");
+	}
+
+	return data;
 }
 
 export async function login(email, senha) {
-	const response = await fetch(`${API_URL}/login`, {
+	const response = await fetch(`${API_URL}/auth/login`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -21,5 +26,17 @@ export async function login(email, senha) {
 		body: JSON.stringify({ email, senha }),
 	});
 
-	return response.json();
+	let data;
+
+	try {
+		data = await response.json();
+	} catch {
+		data = {};
+	}
+
+	if (!response.ok) {
+		throw new Error(data.detail || "Erro no login");
+	}
+
+	return data;
 }

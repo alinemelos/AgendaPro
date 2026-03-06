@@ -8,7 +8,7 @@ import "./team-section.styles.css";
 
 function TeamSection() {
   return (
-    <div className="team-section">
+    <div id="TeamSection" className="team-section">
       <Eyebrow>Nossa Equipe</Eyebrow>
       <HeadingSection>Nosso time</HeadingSection>
       <div className="team-section-cards">
