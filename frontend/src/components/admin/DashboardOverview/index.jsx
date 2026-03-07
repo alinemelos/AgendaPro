@@ -7,7 +7,7 @@ import "../DashboardOverview/dashboard-overview.styles.css";
 
 function DashboardOverview() {
   return (
-    <>
+    <div className="dashboard-overview">
       <CardsAdmin />
 
       <section className="middle-section">
@@ -19,7 +19,7 @@ function DashboardOverview() {
 
         <DashboardHistory />
       </section>
-    </>
+    </div>
   );
 }
 

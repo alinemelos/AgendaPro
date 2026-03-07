@@ -17,15 +17,15 @@ function SidebarAdmin() {
 				<span>nirmal001@gmail.com</span>
 			</div>
 
-			<nav className="menu">
+			<nav className="sidebar-menu">
 				<ul>
 					<li className="active">Dashboard</li>
-					<li>Inventory</li>
-					<li>Orders</li>
-					<li>Purchase</li>
-					<li>Reporting</li>
-					<li>Support</li>
-					<li>Settings</li>
+					<li>Clientes</li>
+					<li>Treinos</li>
+					<li>Agenda</li>
+					<li>Pagamentos</li>
+					<li>Relatórios</li>
+					<li>Configurações</li>
 				</ul>
 			</nav>
 
