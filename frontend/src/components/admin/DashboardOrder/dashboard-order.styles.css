@@ -1,10 +1,35 @@
-.fake-chart {
-  height: 120px;
-  background: #e5edf2;
-  border-radius: 10px;
-  margin-top: 15px;
+.box-content {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 250px;
+	max-height: 250px;
 }
 
-.fake-chart.large {
-  height: 200px;
+.box-content ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.box-content-btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.box-content-btn button {
+	padding: 10px;
+	border-radius: 12px;
+}
+
+.btn-confirm {
+	background-color: #10b981;
+}
+
+.btn-remark {
+	background-color: #F59E0B;
+}
+
+.btn-cancel {
+	background-color: #EF4444;
 }

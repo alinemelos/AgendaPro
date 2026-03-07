@@ -1,4 +1,4 @@
-import GraphyAdmin from "../GraphyAdmin/index";
+// import GraphyAdmin from "../GraphyAdmin/index";
 import HeaderAdmin from "../HeaderAdmin/index";
 import DashboardOverview from "../DashboardOverview";
 
@@ -11,7 +11,7 @@ function DashboardAdmin() {
 
       <DashboardOverview />
 
-      <GraphyAdmin />
+      {/* <GraphyAdmin /> */}
     </main>
   );
 }
