@@ -1,20 +1,33 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 import "../SidebarAdmin/sidebar-admin.styles.css";
 
 function SidebarAdmin() {
+	const [user] = useState(() => {
+		const storedUser = localStorage.getItem("user");
+
+		if (!storedUser || storedUser === "undefined") {
+			return null;
+		}
+
+		return JSON.parse(storedUser);
+	});
+
 	const navigate = useNavigate();
 
 	function handleLogout() {
 		localStorage.removeItem("auth");
 		localStorage.removeItem("token");
+		localStorage.removeItem("user");
 		navigate("/login");
 	}
 	return (
 		<aside className="sidebar">
 			<div className="profile-section">
 				<div className="profile-img"></div>
-				<h3>Nirmal Kumar P</h3>
-				<span>nirmal001@gmail.com</span>
+				<h3>{user?.nome}</h3>
+				<span>{user?.email}</span>
 			</div>
 
 			<nav className="sidebar-menu">
