@@ -6,7 +6,7 @@ function CardsAdmin() {
 			<section className="overview">
 				<div className="card">
 					<div className="card-img">
-						<img src="" alt="" />
+						{/* <img src="" alt="" /> */}
 					</div>
 					<div className="card-content">
 						<h4>5483</h4>
@@ -16,7 +16,7 @@ function CardsAdmin() {
 
 				<div className="card">
 					<div className="card-img">
-						<img src="" alt="" />
+						{/* <img src="" alt="" /> */}
 					</div>
 					<div className="card-content">
 						<h4>5483</h4>
@@ -26,7 +26,7 @@ function CardsAdmin() {
 
 				<div className="card">
 					<div className="card-img">
-						<img src="" alt="" />
+						{/* <img src="" alt="" /> */}
 					</div>
 					<div className="card-content">
 						<h4>5483</h4>
@@ -36,7 +36,7 @@ function CardsAdmin() {
 
 				<div className="card warning">
 					<div className="card-img">
-						<img src="" alt="" />
+						{/* <img src="" alt="" /> */}
 					</div>
 					<div className="card-content">
 						<h4>5483</h4>

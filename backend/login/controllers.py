@@ -8,11 +8,14 @@ from pathlib import Path
 from datetime import datetime, timedelta
 
 
-DATA_FILE = Path("users.json")
-# SECRET = "meuSegredoSuperSeguro"
-SECRET = os.getenv("JWT_SECRET")
+BASE_DIR = Path(__file__).resolve().parent
+DATA_FILE = BASE_DIR / "users.json"
+SECRET = os.getenv("JWT_SECRET", "dev_secret")
 ALGORITHM = "HS256"
 
+if not DATA_FILE.exists():
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump([], f)
 
 def load_users():
     with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -24,7 +27,7 @@ def save_users(users):
 
 def register_user(email: str, senha: str):
     users = load_users()
-    print(users)
+    print("ANTES:", users)
 
     if not email or not senha:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Preencha todos os campos.")
@@ -36,11 +39,11 @@ def register_user(email: str, senha: str):
     users.append({"email": email, "senha": hashed})
     save_users(users)
 
-    print(users)
     return {"message": "cadastro criado com sucesso."}
 
 def login_user(email: str, senha: str):
     users = load_users()
+    print("LOGIN USERS:", users)
 
     user = next((u for u in users if u["email"] == email), None)
 
@@ -61,6 +64,9 @@ def login_user(email: str, senha: str):
     token = jwt.encode(payload, SECRET, algorithm=ALGORITHM)
 
     return {
-        "message": "Login realizado com sucesso!",
-        "token": token
+    "message": "Login realizado com sucesso!",
+    "token": token,
+    "user": {
+        "email": email
     }
+}

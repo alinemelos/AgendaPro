@@ -6,10 +6,22 @@ function DashboardOrder() {
 			<h3>Lista de agendamentos</h3>
 			<div className="box-content">
 				<ul>
-					<li>Cliente</li>
-					<li>Data e horário</li>
-					<li>Status</li>
-					<li>Observações</li>
+					<li>
+						<h4>Cliente</h4>
+						<p>teste</p>
+					</li>
+					<li>
+						<h4>Data e horário</h4>
+						<p>teste</p>
+					</li>
+					<li>
+						<h4>Status</h4>
+						<p>teste</p>
+					</li>
+					<li>
+						<h4>Observações</h4>
+						<p>teste</p>
+					</li>
 				</ul>
 				<div className="box-content-btn">
 					<button className="btn-confirm">confirmar</button>
