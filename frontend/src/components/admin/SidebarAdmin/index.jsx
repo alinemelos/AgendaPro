@@ -1,19 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { alunos } from "../../../../../backend/data/database";
 
-import "../SidebarAdmin/sidebar-admin.styles.css";
+import "./sidebar-admin.styles.css";
 
-function SidebarAdmin() {
-	const [user] = useState(() => {
-		const storedUser = localStorage.getItem("user");
-
-		if (!storedUser || storedUser === "undefined") {
-			return null;
-		}
-
-		return JSON.parse(storedUser);
-	});
-
+function SidebarAdmin({ section, setSection }) {
 	const navigate = useNavigate();
 
 	function handleLogout() {
@@ -22,23 +12,59 @@ function SidebarAdmin() {
 		localStorage.removeItem("user");
 		navigate("/login");
 	}
+
 	return (
 		<aside className="sidebar">
 			<div className="profile-section">
 				<div className="profile-img"></div>
-				<h3>{user?.nome}</h3>
-				<span>{user?.email}</span>
+				<h3>{alunos[0]?.nome}</h3>
+				<span>{alunos[0]?.email}</span>
 			</div>
 
 			<nav className="sidebar-menu">
 				<ul>
-					<li className="active">Dashboard</li>
-					<li>Clientes</li>
-					<li>Treinos</li>
-					<li>Agenda</li>
-					<li>Pagamentos</li>
-					<li>Relatórios</li>
-					<li>Configurações</li>
+					<li
+						className={section === "dashboard" ? "active" : ""}
+						onClick={() => setSection("dashboard")}
+					>
+						Dashboard
+					</li>
+					<li
+						className={section === "clientes" ? "active" : ""}
+						onClick={() => setSection("clientes")}
+					>
+						Clientes
+					</li>
+					<li
+						className={section === "treinos" ? "active" : ""}
+						onClick={() => setSection("treinos")}
+					>
+						Treinos
+					</li>
+					<li
+						className={section === "agenda" ? "active" : ""}
+						onClick={() => setSection("agenda")}
+					>
+						Agenda
+					</li>
+					<li
+						className={section === "pagamentos" ? "active" : ""}
+						onClick={() => setSection("pagamentos")}
+					>
+						Pagamentos
+					</li>
+					<li
+						className={section === "relatorios" ? "active" : ""}
+						onClick={() => setSection("relatorios")}
+					>
+						Relatórios
+					</li>
+					<li
+						className={section === "config" ? "active" : ""}
+						onClick={() => setSection("config")}
+					>
+						Configurações
+					</li>
 				</ul>
 			</nav>
 

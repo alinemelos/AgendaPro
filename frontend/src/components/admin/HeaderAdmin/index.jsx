@@ -1,5 +1,7 @@
-import "../HeaderAdmin/header-admin.styles.css";
 import { useState } from "react";
+import { alunos } from "../../../../../backend/data/database";
+
+import "./header-admin.styles.css";
 
 function HeaderAdmin() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -8,7 +10,7 @@ function HeaderAdmin() {
 
 	return (
 		<header className="topbar">
-			<h2>Bem vindo nome !</h2>
+			<h2>Bem vindo {alunos[0]?.nome} !</h2>
 
 			<div className="header-right">
 				<div className="search-bar">
@@ -20,7 +22,7 @@ function HeaderAdmin() {
 					<span className="slider round"></span>
 				</label>
 
-				<button className="notification-btn">🔔</button>
+				<button className="notification-btn">X</button>
 			</div>
 		</header>
 	);
