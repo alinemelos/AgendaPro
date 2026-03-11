@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { alunos } from "../../../../../backend/data/database";
+import { alunos } from "../../../../../backend/database/database";
 
 import "./sidebar-admin.styles.css";
 
