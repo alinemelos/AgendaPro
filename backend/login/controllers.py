@@ -2,7 +2,7 @@ import bcrypt
 import os
 
 from fastapi import HTTPException, status
-from ..database.conection import get_connection
+from database.conection import get_connection
 from jose import jwt
 from datetime import datetime, timedelta
 
