@@ -35,3 +35,6 @@ coverage
 !.vscode/extensions.json
 .idea
 .DS_Store 
+
+# Ignorar arquivos de teste do banco
+test_connection.py

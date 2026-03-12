@@ -1,26 +1,20 @@
 import os
-from dotenv import load_dotenv
 import psycopg2
 import psycopg2.extras
+from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_HOST = os.getenv("DATABASE_HOST")
-DATABASE_NAME = os.getenv("DATABASE_NAME")
-DATABASE_USER = os.getenv("DATABASE_USER")
-DATABASE_PASSWORD = os.getenv("DATABASE_PASSWORD")
-DATABASE_PORT = os.getenv("DATABASE_PORT")
+DATABASE_URL = os.getenv("DATABASE_URL") 
 
 def get_connection():
 
+    if not DATABASE_URL:
+        raise ValueError("DATABASE_URL não encontrada. Verifique seu .env ou variáveis de ambiente no Render")
+    
     conn = psycopg2.connect(
-        host=DATABASE_HOST,
-        database=DATABASE_NAME,
-        user=DATABASE_USER,
-        password=DATABASE_PASSWORD,
-        port=DATABASE_PORT,
-        sslmode="require",
-        cursor_factory=psycopg2.extras.RealDictCursor
+        DATABASE_URL,
+        cursor_factory=psycopg2.extras.RealDictCursor,
+        sslmode="require" 
     )
-
     return conn
