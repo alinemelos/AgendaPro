@@ -4,7 +4,11 @@ import "./training-list.styles.css";
 function TrainingList({ treinos }) {
 	return (
 		<div className="training-container">
-			<TrainingCard treinos={treinos} />;
+			<div className="training-cards">
+				{treinos.map((treino) => (
+					<TrainingCard treino={treino} />
+				))}
+			</div>
 		</div>
 	);
 }
