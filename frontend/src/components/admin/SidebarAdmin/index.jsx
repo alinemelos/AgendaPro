@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "./sidebar-admin.styles.css";
 
-function SidebarAdmin({ section, setSection }) {
+function SidebarAdmin({ section, setSection, open, setOpen }) {
 	const navigate = useNavigate();
 
 	const [user] = useState(() => {
@@ -20,7 +20,7 @@ function SidebarAdmin({ section, setSection }) {
 	}
 
 	return (
-		<aside className="sidebar">
+		<aside className={`sidebar ${open ? "open" : ""}`}>
 			<div className="profile-section">
 				<div className="profile-img"></div>
 
@@ -32,49 +32,70 @@ function SidebarAdmin({ section, setSection }) {
 				<ul>
 					<li
 						className={section === "dashboard" ? "active" : ""}
-						onClick={() => setSection("dashboard")}
+						onClick={() => {
+							setSection("dashboard");
+							setOpen(false);
+						}}
 					>
 						Dashboard
 					</li>
 
 					<li
 						className={section === "clientes" ? "active" : ""}
-						onClick={() => setSection("clientes")}
+						onClick={() => {
+							setSection("clientes");
+							setOpen(false);
+						}}
 					>
 						Clientes
 					</li>
 
 					<li
 						className={section === "treinos" ? "active" : ""}
-						onClick={() => setSection("treinos")}
+						onClick={() => {
+							setSection("treinos");
+							setOpen(false);
+						}}
 					>
 						Treinos
 					</li>
 
 					<li
 						className={section === "agenda" ? "active" : ""}
-						onClick={() => setSection("agenda")}
+						onClick={() => {
+							setSection("agenda");
+							setOpen(false);
+						}}
 					>
 						Agenda
 					</li>
 
 					<li
 						className={section === "pagamentos" ? "active" : ""}
-						onClick={() => setSection("pagamentos")}
+						onClick={() => {
+							setSection("pagamentos");
+							setOpen(false);
+						}}
 					>
 						Pagamentos
 					</li>
 
 					<li
 						className={section === "relatorios" ? "active" : ""}
-						onClick={() => setSection("relatorios")}
+						onClick={() => {
+							setSection("relatorios");
+							setOpen(false);
+						}}
 					>
 						Relatórios
 					</li>
 
 					<li
 						className={section === "config" ? "active" : ""}
-						onClick={() => setSection("config")}
+						onClick={() => {
+							setSection("config");
+							setOpen(false);
+						}}
 					>
 						Configurações
 					</li>

@@ -40,8 +40,6 @@ function DashboardAdmin({ section }) {
 
 	return (
 		<main className="main-content">
-			<HeaderAdmin />
-
 			{renderContent()}
 		</main>
 	);

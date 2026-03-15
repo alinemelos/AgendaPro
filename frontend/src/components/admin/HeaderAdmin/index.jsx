@@ -1,27 +1,24 @@
-import { useState } from "react";
-
+import NotificationButton from "../../ui/NotificationButton";
+import { notifications } from "../../../../../backend/database/mock";
 import "./header-admin.styles.css";
 
-function HeaderAdmin() {
+function HeaderAdmin({ setSidebarOpen }) {
 	const user = JSON.parse(localStorage.getItem("user"));
-	const [darkMode, setDarkMode] = useState(false);
-	const toggleDarkMode = () => setDarkMode(!darkMode);
+	
 
 	return (
 		<header className="topbar">
-			<h2>Bem vindo {user?.nome || "Usuário"} !</h2>
+			<div className="topbar-content">
+				<h2>Bem vindo {user?.nome || "Usuário"} !</h2>
 
-			<div className="header-right">
-				<div className="search-bar">
-					<input type="text" placeholder="Search" />
-				</div>
+				<NotificationButton notifications={notifications} />
 
-				<label className="switch">
-					<input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
-					<span className="slider round"></span>
-				</label>
-
-				<button className="notification-btn">X</button>
+				<button
+					className="hamburger"
+					onClick={() => setSidebarOpen((prev) => !prev)}
+				>
+					☰
+				</button>
 			</div>
 		</header>
 	);

@@ -8,8 +8,11 @@
 .admin-wrapper {
 	display: flex;
 	height: 100vh;
-	background: linear-gradient(to bottom, #cfdfe6, #7aa5b3);
 	overflow: hidden;
+}
+
+.admin-main {
+	width: 100%;
 }
 
 .main-content {
