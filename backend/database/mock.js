@@ -441,3 +441,13 @@ export const pagamentos = [
 		status: "Pago",
 	},
 ];
+
+export const notifications = [
+	"Nova mensagem de João",
+	"Treino atualizado",
+	"Pagamento recebido",
+	"Treino atualizado",
+	"Pagamento recebido",
+	"Treino atualizado",
+	"Pagamento recebido",
+];

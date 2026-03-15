@@ -1,6 +1,6 @@
 # AgendaPro
 
-Sistema completo de agendamento online para barbearias, desenvolvido em React com foco em experiência do usuário, regras de negócio reais e arquitetura profissional.
+Sistema completo de agendamento online personal trainers, desenvolvido em React com foco em experiência do usuário, regras de negócio reais e arquitetura profissional.
 
 > Projeto desenvolvido para portfólio Front-End, simulando um sistema real utilizado por pequenos negócios.
 
@@ -13,7 +13,7 @@ O **AgendaPro** é uma aplicação web que permite:
 - Clientes visualizarem horários disponíveis
 - Realizarem agendamentos online
 - Cancelarem agendamentos
-- Administradores gerenciarem agenda
+- Administradores gerenciarem agenda, treinos e alunos
 - Visualizarem relatórios
 - Suporte a múltiplos profissionais
 
@@ -50,19 +50,26 @@ O AgendaPro resolve:
 - JavaScript
 - React Router
 - Context API
+- React Hooks
+- Custom Hooks
 - Hooks customizados
 
 ### Back-end / Banco de Dados
 
-- Supabase,
+- Supabase
+- PostgreSQL (database do Supabase)
+- API REST (Supabase)
+- Autenticação (Auth)
 
 ### Extras
 
 - Integração com WhatsApp
-- Deploy na Vercel
-- Autenticação de administrador
+- Deploy na Vercel, Render e Supabase
+- Autenticação de administrado e aluno
+- CRUD de clientes
 - Dark Mode
 - Responsividade completa
+- Sistema de login persistente (localStorage)
 
 ---
 
@@ -76,6 +83,10 @@ AgendaPro/
 │   ├── data/
 │   │
 │   ├── login/
+│   │
+│   ├── database/
+│   │
+│   ├── repositories/
 │   │
 │   └── server.py
 │   
@@ -213,21 +224,16 @@ git clone https://github.com/joaoemanuels/AgendaPro.git
 # Entrar na pasta
 cd agendapro
 
-# Instalar dependências
+# Instalar dependências na pasta frontend
 npm i
 
-# Rodar o projeto
-npm run dev
+# Rodar o projeto na pasta base ( AgendaPro)
+./start-dev.bat
 
 # A aplicação estará disponível em:
 http://localhost:5173
+
 ```
-
-## Deploy
-
-O projeto é hospedado em:
-
-- Vercel
 
 ## Próximas Melhorias
 
